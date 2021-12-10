@@ -26,3 +26,7 @@ to move ships from side of board to positions placed by player*****
 18.render missses
 19. if player wins return "WINNER" on screen with a replay button
 20. if computer wins return "YOU LOSE" with a replay button.
+
+<img width="1440" alt="Screen Shot 2021-12-10 at 1 45 03 PM" src="https://user-images.githubusercontent.com/94722723/145645246-2c2cd093-e6f1-43bc-9424-ee1d107dacd2.png">
+<img width="1440" alt="Screen Shot 2021-12-10 at 1 44 48 PM" src="https://user-images.githubusercontent.com/94722723/145645261-de5a4853-61e6-4624-b587-5a6d4ab9b50b.png">
+<img width="1440" alt="Screen Shot 2021-12-10 at 1 45 17 PM" src="https://user-images.githubusercontent.com/94722723/145645272-daf345fc-34bb-409a-a8fb-325a12204093.png">
