@@ -1,0 +1,71 @@
+html, * {
+    font-family: helvetica;
+    box-sizing: border-box;
+}
+
+body {
+    height:initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+main {
+    display: grid;
+    /* grid-template-columns: 30vmin 15vmin 30vmin; */
+    grid-template-rows: 10vmin 2vmin 10vmin 5vmin;
+}
+
+main * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main button {
+    grid-column: span 1;
+    margin: 2vmin;
+    font-style: bold;
+}
+
+h1 {
+    color: rgb(235, 146, 161);
+}
+
+h2 {
+    display: flex;
+    margin-top: 75px;
+    flex-grow: initial;
+    color: white;
+}
+
+#i-results {
+    margin-top: auto;
+    border: 2vmin solid white;
+    border-radius: 2vmin;
+    padding: 2vmin;
+}
+
+#i-results img {
+    width: 100%;
+    padding: 50px;
+}
+
+button {
+    margin-top: 15vmin;
+    background-color: rgb(102, 205, 223);
+    color: rgb(167, 101, 230);
+    border: 1vmin solid black;
+    border-radius: 4vmin;
+    font-size: 4vmin;
+    outline: none;
+    font-style: bold;
+}
+
+#btn2 {
+    background-color: rgb(180, 28, 28);
+    color: white;
+    font-style: bold;
+}
