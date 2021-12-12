@@ -40,13 +40,47 @@ console.log(countDownEl)
 
 const choicesEl = {
     choiceOne: {
+        borderEl: document.querySelector('#i-results'),
         imgEl: document.querySelector('#i-results img'),
     },
     choiceTwo: {
+        borderEl: document.querySelector('#i-results'),
         imgEl: document.querySelector('#i-results img'),
     },
     choiceThree: {
+        borderEl: document.querySelector('#i-results'),
         imgEl: document.querySelector('#i-results img'),
     },
 };
 console.log(choicesEl)
+
+//add eventListener to buttons
+
+// document.querySelector('button').addEventListenerObject('click', );
+
+buttonEl = document.querySelector('button').addEventListener('click', function() {
+    document.getElementById('startBtn');
+console.log('message produced when clicked')
+
+});
+//   console.log(buttonEl)
+init();
+
+function init() {
+    scores = {
+        wins: 0,
+        losses: 0,
+    };
+
+    choices = {
+        choiceOne: 'heart',
+        choiceTwo: 'heart',
+        choiceThree: 'heart',
+    };
+
+    render();
+}
+
+function render() {
+    console.log('check render');
+}
