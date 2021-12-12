@@ -83,4 +83,8 @@ function init() {
 
 function render() {
     console.log('check render');
+
+    for (let score in scores) {
+        scoreEls[score].innerText = scores[score];
+    };
 }
