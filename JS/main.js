@@ -58,12 +58,8 @@ console.log(choicesEl)
 
 // document.querySelector('button').addEventListenerObject('click', );
 
-buttonEl = document.querySelector('button').addEventListener('click', function() {
-    document.getElementById('startBtn');
-console.log('message produced when clicked')
-
-});
-//   console.log(buttonEl)
+document.querySelector('button').addEventListener('click', playRound)
+   console.log(playRound)
 init();
 
 function init() {
@@ -82,7 +78,7 @@ function init() {
 }
 
 function render() {
-    console.log('check render');
+    //console.log('check render');
 
     for (let score in scores) {
         scoreEls[score].innerText = scores[score];
@@ -90,9 +86,39 @@ function render() {
 
     for(let choice in choices) {
         choicesEl[choice].imgEl.src = smLookup[choices[choice]].imageUrl;
+
+        if(scores.wins === choice){
+            choicesEl[choice].borderEl.style.borderColor = 'yellow';
+        } else {
+            choicesEl[choice].borderEl.style.borderColor = 'white';
+        }
         console.log(choicesEl[choice].imgEl.src)
     }
-    
+}   
 
+
+function playRound() {
+    console.log('play round function working');
+
+
+choices.choiceOne = getRandomSM();
+choices.choiceTwo = getRandomSM();
+choices.choiceThree = getRandomSM();
+
+if (choices.choiceOne === choices.choiceTwo && choices.choiceOne === choices.choiceThree) {
+    return scores.wins;
+} else {
+    return scores.losses;
+    }
 }
 
+render();
+
+function getRandomSM() {
+    const choices = ['heart', 'crazy', 'cry'];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    
+    return choices[randomIndex];
+}
+
+console.log(choices)
