@@ -1,12 +1,12 @@
 const smLookup = {
-    heart: {
-        imageUrl: 'https://i.imgur.com/y6Ke2h1.jpg',
+    crazy: {
+        imageUrl: 'imgs/crazy.jpg',
     },
     cry: {
-        imageUrl: 'https://i.imgur.com/WHwjsY6.jpg',
+        imageUrl: 'imgs/cry.jpg',
     },
-    crazy: {
-        imageUrl: 'https://i.imgur.com/T7sxx5o.jpg',
+    heart: {
+        imageUrl: 'imgs/heart.jpg',
     },
 };
 
@@ -41,15 +41,15 @@ console.log(countDownEl)
 const choicesEl = {
     choiceOne: {
         borderEl: document.querySelector('#i-results'),
-        imgEl: document.querySelector('#i-results img'),
+        imgEl: document.querySelector('#imgOne'),
     },
     choiceTwo: {
         borderEl: document.querySelector('#i-results'),
-        imgEl: document.querySelector('#i-results img'),
+        imgEl: document.querySelector('#imgTwo'),
     },
     choiceThree: {
         borderEl: document.querySelector('#i-results'),
-        imgEl: document.querySelector('#i-results img'),
+        imgEl: document.querySelector('#imgThree'),
     },
 };
 console.log(choicesEl)
@@ -74,8 +74,8 @@ function init() {
 
     choices = {
         choiceOne: 'heart',
-        choiceTwo: 'heart',
-        choiceThree: 'heart',
+        choiceTwo: 'cry',
+        choiceThree: 'crazy',
     };
 
     render();
@@ -87,4 +87,12 @@ function render() {
     for (let score in scores) {
         scoreEls[score].innerText = scores[score];
     };
+
+    for(let choice in choices) {
+        choicesEl[choice].imgEl.src = smLookup[choices[choice]].imageUrl;
+        console.log(choicesEl[choice].imgEl.src)
+    }
+    
+
 }
+
