@@ -14,7 +14,6 @@ body {
 
 main {
     display: grid;
-    /* grid-template-columns: 30vmin 15vmin 30vmin; */
     grid-template-rows: 10vmin 2vmin 10vmin 5vmin;
 }
 
@@ -35,7 +34,8 @@ h1 {
 }
 
 h2 {
-    display: flex;
+    
+    display: inline-flex;
     margin-top: 75px;
     flex-grow: initial;
     color: white;
@@ -63,9 +63,3 @@ button {
     outline: none;
     font-style: bold;
 }
-
-/* #btn2 { */
-    /* background-color: rgb(180, 28, 28); */
-    /* color: white; */
-    /* font-style: bold; */
-/* } */

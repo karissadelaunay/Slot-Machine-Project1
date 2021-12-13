@@ -35,8 +35,8 @@ const scoreEls = {
 };
 console.log(scoreEls)
 
-const countDownEl = document.querySelector('#countdown');
-console.log(countDownEl)
+//const countDownEl = document.querySelector('#countdown');
+//console.log(countDownEl)
 
 const choicesEl = {
     choiceOne: {
@@ -81,11 +81,16 @@ function render() {
     //console.log('check render');
 
     for (let score in scores) {
-        scoreEls[score].innerText = scores[score];
+        if(scoreEls[score] && scoreEls[score].innerText) {
+            console.log(score, 'line 85')
+            scoreEls[score].innerText = scores[score].toString(); 
+        }
     };
 
     for(let choice in choices) {
         choicesEl[choice].imgEl.src = smLookup[choices[choice]].imageUrl;
+
+        console.log(smLookup[choices[choice]].imageUrl);
 
         if(scores.wins === choice){
             choicesEl[choice].borderEl.style.borderColor = 'yellow';
@@ -94,6 +99,7 @@ function render() {
         }
         console.log(choicesEl[choice].imgEl.src)
     }
+
 }   
 
 
@@ -106,13 +112,16 @@ choices.choiceTwo = getRandomSM();
 choices.choiceThree = getRandomSM();
 
 if (choices.choiceOne === choices.choiceTwo && choices.choiceOne === choices.choiceThree) {
-    return scores.wins;
+    scores.wins++;
 } else {
-    return scores.losses;
+    scores.losses++;
     }
-}
 
 render();
+
+}
+
+
 
 function getRandomSM() {
     const choices = ['heart', 'crazy', 'cry'];
@@ -121,4 +130,4 @@ function getRandomSM() {
     return choices[randomIndex];
 }
 
-console.log(choices)
+render();
