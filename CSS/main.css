@@ -4,10 +4,13 @@ html, * {
 }
 
 body {
+    background: url(https://i.imgur.com/Wx2Fjm0.jpg);
+    background-size: cover;
+    background-position:center;
     height:initial;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
 }
@@ -30,12 +33,12 @@ main button {
 }
 
 h1 {
-    color: rgb(235, 146, 161);
+    color: rgb(231, 0, 0);
 }
 
 h2 {
     
-    display: inline-flex;
+    display: inline-block;
     margin-top: 75px;
     flex-grow: initial;
     color: white;
@@ -43,23 +46,44 @@ h2 {
 
 #i-results {
     margin-top: auto;
-    border: 2vmin solid white;
+    /* border: 2vmin solid white; */
     border-radius: 2vmin;
     padding: 2vmin;
 }
 
 #i-results img {
+    margin: 20px 75px 75px 20px;
     width: 100%;
-    padding: 50px;
+    /* padding: 20px 75px 75px 20px; */
 }
 
 button {
     margin-top: 15vmin;
-    background-color: rgb(102, 205, 223);
-    color: rgb(167, 101, 230);
+    background-color: rgb(202, 8, 8);
+    color: rgb(255, 196, 35);
     border: 1vmin solid black;
     border-radius: 4vmin;
     font-size: 4vmin;
     outline: none;
     font-style: bold;
 }
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+        transform: rotateX(720deg);
+        transform-style: preserve-3d;
+        transform: calc(100% - 20px);
+      }
+    }
+
+  
+  #i-results img {
+    animation: spinning 1s infinite;
+    animation-timing-function:linear;
+  } 
+
+
