@@ -59,6 +59,7 @@ console.log(choicesEl)
 // document.querySelector('button').addEventListenerObject('click', );
 
 document.querySelector('button').addEventListener('click', playRound)
+document.querySelector('button').addEventListener('click', backgroundAnimation)
    console.log(playRound)
 init();
 
@@ -90,14 +91,14 @@ function render() {
     for(let choice in choices) {
         choicesEl[choice].imgEl.src = smLookup[choices[choice]].imageUrl;
 
-        console.log(smLookup[choices[choice]].imageUrl);
+        console.log(smLookup[choices[choice]].imageUrl, 'line 94 render function');
 
-        if(scores.wins === choice){
+        if(scores.wins === choices){
             choicesEl[choice].borderEl.style.borderColor = 'yellow';
         } else {
             choicesEl[choice].borderEl.style.borderColor = 'white';
         }
-        console.log(choicesEl[choice].imgEl.src)
+        console.log(choicesEl[choice].imgEl.src, 'my ing src in render')
     }
 
 }   
@@ -106,31 +107,71 @@ function render() {
 function playRound() {
     console.log('play round function working');
 
+backgroundAnimation();
 
-choices.choiceOne = getRandomSM();
-choices.choiceTwo = getRandomSM();
-choices.choiceThree = getRandomSM();
+setTimeout(()=> {choices.choiceOne = getRandomSM()},1000);
+setTimeout(()=> {choices.choiceTwo = getRandomSM()},1000);
+setTimeout(()=> {choices.choiceThree = getRandomSM()},1000);
 
-if (choices.choiceOne === choices.choiceTwo && choices.choiceOne === choices.choiceThree) {
+setTimeout(()=> {
+    if (choices.choiceOne === choices.choiceTwo && choices.choiceOne === choices.choiceThree) {
     scores.wins++;
 } else {
     scores.losses++;
     }
+},1005);
 
-render();
+setTimeout(() => {render()},1010);
+
+
 
 }
-
-function prefixedEvent(){
-
-}
-
 
 function getRandomSM() {
     const choices = ['heart', 'crazy', 'cry'];
     const randomIndex = Math.floor(Math.random() * choices.length);
-    
+   console.log('hey there', choices[randomIndex]) 
     return choices[randomIndex];
 }
 
-render();
+function backgroundAnimation() {
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/crazy.jpg';},100)
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/cry.jpg';},200)
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/heart.jpg';},300)
+
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/crazy.jpg';},400)
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/cry.jpg';},500)
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/heart.jpg';},600)
+
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/crazy.jpg';},700)
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/cry.jpg';},800)
+    setTimeout(()=> {choicesEl.choiceOne.imgEl.src = 'imgs/heart.jpg';},900)
+
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/cry.jpg';},100)
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/heart.jpg';},200)
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/crazy.jpg';},300)
+
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/cry.jpg';},400)
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/heart.jpg';},500)
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/crazy.jpg';},600)
+
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/cry.jpg';},700)
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/heart.jpg';},800)
+    setTimeout(()=> {choicesEl.choiceTwo.imgEl.src = 'imgs/crazy.jpg';},900)
+
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/heart.jpg';},100)
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/crazy.jpg';},200)
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/cry.jpg';},300)
+
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/heart.jpg';},400)
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/crazy.jpg';},500)
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/cry.jpg';},600)
+
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/heart.jpg';},700)
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/crazy.jpg';},800)
+    setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/cry.jpg';},900)
+}
+
+
+
+
