@@ -48,7 +48,7 @@ div {
     align-items: stretch;
 }
 
-#imgOne i#mgTwo #imgThree {
+#imgOne #imgTwo #imgThree {
     order: 3;
     display: flex;
     flex-direction: row;
