@@ -4,22 +4,17 @@ html, * {
 }
 
 body {
-    background: url(https://i.imgur.com/Wx2Fjm0.jpg);
-    background-size: cover;
-    background-position:center;
-    height:initial;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
 }
 
 main {
-    /* display: flexbox;
-    flex-item-align: align-items; */
     display: grid;
-    grid-template-rows: 10vmin 2vmin 10vmin 5vmin;
+    grid-template-rows: 10vmin 2vmin 10vmin 4vmin;
 }
 
 main * {
@@ -39,24 +34,31 @@ h1 {
 }
 
 h2 {
-    
-    display: inline-block;
+    display: grid;
+    grid-template-rows: 0vmin 20vmin 2vmin 4vmin;
     margin-top: 75px;
     flex-grow: initial;
     color: white;
 }
 
-#i-results {
-    margin-top: auto;
-    /* border: 2vmin solid white; */
-    border-radius: 2vmin;
-    padding: 2vmin;
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: stretch;
+}
+
+#imgOne i#mgTwo #imgThree {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content:stretch;
+    align-items: stretch;
 }
 
 #i-results img {
     margin: 20px 75px 75px 20px;
     width: 100%;
-    border-radius: 250px;
     padding: 0;
 }
 
@@ -70,21 +72,6 @@ button {
     outline: none;
     font-style: bold;
 }
-
-/* @keyframes spinning {
-    from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: translateY(50px);
-        transform: rotate(720deg); 
-      }
-    }
-
   
-  #i-results img {
-    animation: spinning 1s infinite;
-    animation-timing-function:linear;
-  }  */
 
 
