@@ -16,6 +16,8 @@ body {
 }
 
 main {
+    /* display: flexbox;
+    flex-item-align: align-items; */
     display: grid;
     grid-template-rows: 10vmin 2vmin 10vmin 5vmin;
 }
@@ -74,10 +76,8 @@ button {
         transform: rotate(0deg);
       }
       to {
-        transform: rotateY(360deg);
-        transform: rotateX(720deg);
-        transform-style: preserve-3d;
-        transform: calc(100% - 20px);
+        transform: translateY(50px);
+        transform: rotate(720deg); 
       }
     }
 

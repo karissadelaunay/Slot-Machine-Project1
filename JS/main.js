@@ -9,34 +9,16 @@ const smLookup = {
         imageUrl: 'imgs/heart.jpg',
     },
 };
-
 //state variables(use an object)
 let scores;
 
 let choices;
 
-//initial value 
-//{
-// wins: 0,
-//losses: 0,
-//}
-
-//{
-//choiceOne: 'heart , 'cry', 'crazy',
-//choiceTwo: 'heart , 'cry', 'crazy',
-//choiceThree: 'heart , 'cry', 'crazy',  
-//}
-
 // cache changing variables to the DOM
-
 const scoreEls = {
     wins: document.querySelector('#w-score'),
     losses: document.querySelector('#l-score'),
 };
-console.log(scoreEls)
-
-//const countDownEl = document.querySelector('#countdown');
-//console.log(countDownEl)
 
 const choicesEl = {
     choiceOne: {
@@ -52,15 +34,12 @@ const choicesEl = {
         imgEl: document.querySelector('#imgThree'),
     },
 };
-console.log(choicesEl)
 
 //add eventListener to buttons
-
-// document.querySelector('button').addEventListenerObject('click', );
-
 document.querySelector('button').addEventListener('click', playRound)
 document.querySelector('button').addEventListener('click', backgroundAnimation)
-   console.log(playRound)
+
+//call init
 init();
 
 function init() {
@@ -75,11 +54,12 @@ function init() {
         choiceThree: 'crazy',
     };
 
-    render();
+//call render
+render();
+
 }
 
 function render() {
-    //console.log('check render');
 
     for (let score in scores) {
         if(scoreEls[score] && scoreEls[score].innerText) {
@@ -91,21 +71,16 @@ function render() {
     for(let choice in choices) {
         choicesEl[choice].imgEl.src = smLookup[choices[choice]].imageUrl;
 
-        console.log(smLookup[choices[choice]].imageUrl, 'line 94 render function');
-
         if(scores.wins === choices){
             choicesEl[choice].borderEl.style.borderColor = 'yellow';
         } else {
             choicesEl[choice].borderEl.style.borderColor = 'white';
         }
-        console.log(choicesEl[choice].imgEl.src, 'my ing src in render')
     }
 
 }   
 
-
 function playRound() {
-    console.log('play round function working');
 
 backgroundAnimation();
 
@@ -123,14 +98,11 @@ setTimeout(()=> {
 
 setTimeout(() => {render()},1010);
 
-
-
 }
 
 function getRandomSM() {
     const choices = ['heart', 'crazy', 'cry'];
     const randomIndex = Math.floor(Math.random() * choices.length);
-   console.log('hey there', choices[randomIndex]) 
     return choices[randomIndex];
 }
 
