@@ -20,3 +20,11 @@ psudo code:
 
 <img width="1440" alt="Screen Shot 2021-12-10 at 3 16 20 PM" src="https://user-images.githubusercontent.com/94722723/145652854-70bf8f14-8977-4dcc-8a7e-5b89dcec25c7.png">
 <img width="1440" alt="Screen Shot 2021-12-10 at 3 15 51 PM" src="https://user-images.githubusercontent.com/94722723/145652858-ad8a4331-b9d8-47cd-be28-4e1b71c637a7.png">
+
+
+
+<img width="1440" alt="Screen Shot 2021-12-15 at 1 55 45 PM" src="https://user-images.githubusercontent.com/94722723/146271285-1fd5bfb0-11d8-453a-bc76-621b81de04da.png">
+ICEBOX FEATURES:
+1. add visual of an actual slot machine and have pictures rotate in animation
+2. add handle that when you clikc, it pulls down to start the game
+3. add betting feature
