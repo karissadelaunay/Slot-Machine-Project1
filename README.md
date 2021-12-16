@@ -38,3 +38,4 @@ psudo code:
 1. add visual of an actual slot machine and have pictures rotate in animation
 2. add handle that when you click, it pulls down to start the game
 3. add betting feature
+4. add sound affects
