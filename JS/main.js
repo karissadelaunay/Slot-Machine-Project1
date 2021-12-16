@@ -63,21 +63,13 @@ function render() {
 
     for (let score in scores) {
         if(scoreEls[score] && scoreEls[score].innerText) {
-            console.log(score, 'line 85')
             scoreEls[score].innerText = scores[score].toString(); 
         }
     };
 
     for(let choice in choices) {
         choicesEl[choice].imgEl.src = smLookup[choices[choice]].imageUrl;
-
-        if(scores.wins === choices){
-            choicesEl[choice].borderEl.style.borderColor = 'yellow';
-        } else {
-            choicesEl[choice].borderEl.style.borderColor = 'white';
-        }
     }
-
 }   
 
 function playRound() {
@@ -143,6 +135,9 @@ function backgroundAnimation() {
     setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/crazy.jpg';},800)
     setTimeout(()=> {choicesEl.choiceThree.imgEl.src = 'imgs/cry.jpg';},900)
 }
+
+
+    
 
 
 
