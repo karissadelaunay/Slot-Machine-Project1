@@ -11,7 +11,7 @@ const smLookup = {
 };
 //state variables(use an object)
 let scores;
-
+console.log(scores)
 let choices;
 
 // cache changing variables to the DOM
