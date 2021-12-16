@@ -72,6 +72,21 @@ button {
     outline: none;
     font-style: bold;
 }
-  
+
+/* @keyframes spinning {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(720deg);
+      }
+    }
+
+
+  #i-results img {
+    animation: spinning 1s infinite;
+    animation-timing-function:linear;
+  } 
+   */
 
 
