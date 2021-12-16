@@ -33,7 +33,7 @@ psudo code:
 
 # Link to play!
 
-1. 
+1. https://karissadelaunay.github.io/Slot-Machine-Project1/
 
 <img width="1440" alt="Screen Shot 2021-12-15 at 1 55 45 PM" src="https://user-images.githubusercontent.com/94722723/146271285-1fd5bfb0-11d8-453a-bc76-621b81de04da.png">
 
